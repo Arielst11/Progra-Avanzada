@@ -1,6 +1,98 @@
+<!-- Titulo e imagen -->
+<section class="breadcrumb-section set-bg" data-setbg="/WebItems/img/banner.JPG">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Contactanos</h2>
+                    <div class="breadcrumb__option">
+                        @Html.ActionLink("Inicio", "index", "Store", new { area = "" }, new { @class = "nav-link" })
+                        <span>Contáctenos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Titulo e imagen fin -->
+<!-- Contacto iconos -->
+<section class="contact spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                <div class="contact__widget">
+                    <span class="icon_phone"></span>
+                    <h4>Teléfono</h4>
+                    <p>888888888888</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                <div class="contact__widget">
+                    <span class="icon_pin_alt"></span>
+                    <h4>Dirección</h4>
+                    <p>San José Costa Rica</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                <div class="contact__widget">
+                    <span class="icon_clock_alt"></span>
+                    <h4>Horario</h4>
+                    <p>10:00 am - 9:00 pm</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                <div class="contact__widget">
+                    <span class="icon_mail_alt"></span>
+                    <h4>Correo</h4>
+                    <p>correo@ejemplo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contacto iconos  fin -->
+<!-- Map Begin -->
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13218.387262458895!2d-84.0396421687049!3d9.946432030937554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa1ab3bdee1f613%3A0xa13c603b24a9a69a!2sCorreos%20de%20Costa%20Rica%2C%20Sucursal%20Sabanilla!5e0!3m2!1ses!2scr!4v1685224309516!5m2!1ses!2scr" 
+            height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
+    <div class="map-inside">
+        <i class="icon_pin"></i>
+        <div class="inside-widget">
+            <h4>San José Correos de costa rica</h4>
+            <ul>
+                <li>Tel: 22578888</li>
+                <li>correo correos.go.cr</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Map End -->
 
-<h1>pagina contacto</h1>
-
-
-
+<!-- Contact Form Begin -->
+<div class="contact-form spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contact__form__title">
+                    <h2>Deja un mensaje</h2>
+                </div>
+            </div>
+        </div>
+        <form action="#">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <input type="text" placeholder="Tu nombre">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <input type="text" placeholder="Tu correo">
+                </div>
+                <div class="col-lg-12 text-center">
+                    <textarea placeholder="Tu mensaje aqui "></textarea>
+                    <button type="submit" class="site-btn">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Contact Form End -->

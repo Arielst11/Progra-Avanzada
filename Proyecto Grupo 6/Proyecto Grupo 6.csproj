@@ -162,6 +162,7 @@
     <Content Include="WebItems\css\style.css" />
     <Content Include="WebItems\fonts\ElegantIcons.svg" />
     <Content Include="WebItems\fonts\fontawesome-webfont.svg" />
+    <Content Include="WebItems\img\banner.JPG" />
     <Content Include="WebItems\img\banner\banner-1.jpg" />
     <Content Include="WebItems\img\banner\banner-2.jpg" />
     <Content Include="WebItems\img\blog\blog-1.jpg" />
