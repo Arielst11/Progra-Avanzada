@@ -18,13 +18,13 @@ namespace Proyecto_Grupo_6.Controllers
         }
 
 
-        /*
+        
         public ActionResult contact()
         {
             ViewBag.Message = "Your contact page.";
 
-            return View("contact");
+            return View("Contact");
         }
-       */
+       
     }
 }

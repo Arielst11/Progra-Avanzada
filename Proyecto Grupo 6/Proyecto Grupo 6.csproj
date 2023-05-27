@@ -285,6 +285,7 @@
     <Content Include="WebItems\sass\_sidebar.scss" />
     <Content Include="WebItems\sass\_variable.scss" />
     <Content Include="Views\Store\index.cshtml" />
+    <Content Include="Views\Store\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

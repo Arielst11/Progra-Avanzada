@@ -13,14 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="WebItems/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="WebItems/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="WebItems/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="WebItems/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="WebItems/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="WebItems/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="WebItems/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="WebItems/css/style.css" type="text/css">
+   
+
+    <link href="~/WebItems/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/WebItems/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/nice-select.css" rel="stylesheet" />
+    <link href="~/WebItems/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/style.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
@@ -74,7 +78,7 @@
         <div class="humberger__menu__contact">
             <ul>
                 <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                
+
             </ul>
         </div>
     </div>
@@ -128,7 +132,9 @@
                     <nav class="header__menu">
                         <ul>
                             <!-- Aqui se agregan los enlace al controlador y del controlador a las vistas modo escritorio -->
-                            <li>@Html.ActionLink("Inicio", "index", "Store", new { area = "" }, new { @class = "nav-link" })</li>                        
+                            <li>@Html.ActionLink("Inicio", "index", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Contacto", "contact", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+
                         </ul>
                     </nav>
                 </div>
@@ -226,15 +232,15 @@
     </footer>
     <!-- Footer Section End -->
     <!-- Js Plugins -->
-    <script src="WebItems/js/jquery-3.3.1.min.js"></script>
-    <script src="WebItems/js/bootstrap.min.js"></script>
-    <script src="WebItems/js/jquery.nice-select.min.js"></script>
-    <script src="WebItems/js/jquery-ui.min.js"></script>
-    <script src="WebItems/js/jquery.slicknav.js"></script>
-    <script src="WebItems/js/mixitup.min.js"></script>
-    <script src="WebItems/js/owl.carousel.min.js"></script>
-    <script src="WebItems/js/main.js"></script>
-
+    
+    <script src="~/WebItems/js/owl.carousel.min.js"></script>
+    <script src="~/WebItems/js/bootstrap.min.js"></script>
+    <script src="~/WebItems/js/jquery-3.3.1.min.js"></script>
+    <script src="~/WebItems/js/jquery-ui.min.js"></script>
+    <script src="~/WebItems/js/jquery.nice-select.min.js"></script>
+    <script src="~/WebItems/js/jquery.slicknav.js"></script>
+    <script src="~/WebItems/js/main.js"></script>
+    <script src="~/WebItems/js/mixitup.min.js"></script>
 
 </body>
 
