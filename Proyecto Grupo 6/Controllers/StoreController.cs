@@ -25,6 +25,13 @@ namespace Proyecto_Grupo_6.Controllers
 
             return View("Contact");
         }
-       
+
+        public ActionResult shop()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View("Shop");
+        }
+
     }
 }
