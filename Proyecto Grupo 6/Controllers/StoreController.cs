@@ -33,5 +33,12 @@ namespace Proyecto_Grupo_6.Controllers
             return View("Shop");
         }
 
+        public ActionResult blog()
+        {
+            ViewBag.Message = "Your blog page.";
+
+            return View("Blog");
+        }
+
     }
 }

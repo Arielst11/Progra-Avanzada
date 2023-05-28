@@ -195,6 +195,15 @@
     <Content Include="WebItems\img\featured\feature-7.jpg" />
     <Content Include="WebItems\img\featured\feature-8.jpg" />
     <Content Include="WebItems\img\hero\banner.jpg" />
+    <Content Include="WebItems\img\imgBlog\alternador.jpg" />
+    <Content Include="WebItems\img\imgBlog\bateria.jpg" />
+    <Content Include="WebItems\img\imgBlog\filtrodeAire.jpg" />
+    <Content Include="WebItems\img\imgBlog\frenos.jpg" />
+    <Content Include="WebItems\img\imgBlog\neumaticos.jpg" />
+    <Content Include="WebItems\img\imgBlog\noticia1.jpg" />
+    <Content Include="WebItems\img\imgBlog\noticia2.jpg" />
+    <Content Include="WebItems\img\imgBlog\noticia3.png" />
+    <Content Include="WebItems\img\imgBlog\suspencion.jpg" />
     <Content Include="WebItems\img\language.png" />
     <Content Include="WebItems\img\latest-product\lp-1.jpg" />
     <Content Include="WebItems\img\latest-product\lp-2.jpg" />
@@ -288,6 +297,7 @@
     <Content Include="Views\Store\index.cshtml" />
     <Content Include="Views\Store\Contact.cshtml" />
     <Content Include="Views\Store\Shop.cshtml" />
+    <Content Include="Views\Store\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
