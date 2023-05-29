@@ -237,6 +237,10 @@
     <Content Include="WebItems\img\product\product-7.jpg" />
     <Content Include="WebItems\img\product\product-8.jpg" />
     <Content Include="WebItems\img\product\product-9.jpg" />
+    <Content Include="WebItems\img\shopDetail\AROSRHINO.jpg" />
+    <Content Include="WebItems\img\shopDetail\BODYKITPORSHE.jpg" />
+    <Content Include="WebItems\img\shopDetail\RB26.jpg" />
+    <Content Include="WebItems\img\shopDetail\RESPUESTOS.jpg" />
     <Content Include="WebItems\js\bootstrap.min.js" />
     <Content Include="WebItems\js\jquery-3.3.1.min.js" />
     <Content Include="WebItems\js\jquery-ui.min.js" />
@@ -298,6 +302,9 @@
     <Content Include="Views\Store\Contact.cshtml" />
     <Content Include="Views\Store\Shop.cshtml" />
     <Content Include="Views\Store\Blog.cshtml" />
+    <Content Include="Views\Store\shopDetails.cshtml" />
+    <Content Include="Views\Store\shopingCart.cshtml" />
+    <Content Include="Views\Store\checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -40,5 +40,26 @@ namespace Proyecto_Grupo_6.Controllers
             return View("Blog");
         }
 
+        public ActionResult shopDetails()
+        {
+            ViewBag.Message = "Your shop details.";
+
+            return View("shopDetails");
+        }
+
+        public ActionResult shopingCart()
+        {
+            ViewBag.Message = "Your shoping cart.";
+
+            return View("shopingCart");
+        }
+
+        public ActionResult checkout()
+        {
+            ViewBag.Message = "Your checkout.";
+
+            return View("checkout");
+        }
+
     }
 }
