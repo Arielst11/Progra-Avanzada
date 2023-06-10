@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Iniciar Sesion";
+    Layout = "~/Views/Shared/_Layout - login.cshtml";
+}
+
+@using (Html.BeginForm("RegistrarUsuario", "Home", FormMethod.Post))
+{
+    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+            <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h3 style="color: forestgreen !important" class="text-primary">Iniciar Sesión</h3>
+                </div>               
+                <div class="form-floating mb-3">
+
+                    <input type="email" placeholder="correo@correo.com" />
+                    <label for="floatingInput">Correo Electrónico</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="password" placeholder="Contraseña" />
+                    <label for="floatingPassword">Contraseña</label>
+                </div>
+                <button style="background-color: forestgreen !important" type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesión </button>
+                <p class="text-center mb-0">Regresar a  <a style="color: forestgreen !important" href="@Url.Action("index","Store")">Inicio</a></p>
+
+            </div>
+        </div>
+    </div>
+}

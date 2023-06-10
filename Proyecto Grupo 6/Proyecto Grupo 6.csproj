@@ -305,6 +305,9 @@
     <Content Include="Views\Store\shopDetails.cshtml" />
     <Content Include="Views\Store\shopingCart.cshtml" />
     <Content Include="Views\Store\checkout.cshtml" />
+    <Content Include="Views\Shared\_Layout - login.cshtml" />
+    <Content Include="Views\Store\IniciarSesion.cshtml" />
+    <Content Include="Views\Store\Registro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

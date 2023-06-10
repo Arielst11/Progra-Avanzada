@@ -417,3 +417,9 @@ C:\Users\darkg\Source\Repos\Progra-Avanzada\Proyecto Grupo 6\obj\Debug\Proyecto 
 C:\Users\darkg\Source\Repos\Progra-Avanzada\Proyecto Grupo 6\obj\Debug\Proyecto Grupo 6.csproj.CopyComplete
 C:\Users\darkg\Source\Repos\Progra-Avanzada\Proyecto Grupo 6\obj\Debug\Proyecto Grupo 6.dll
 C:\Users\darkg\Source\Repos\Progra-Avanzada\Proyecto Grupo 6\obj\Debug\Proyecto Grupo 6.pdb
+C:\Users\asanc\Desktop\Avanzada\repositorio\Progra-Avanzada\Proyecto Grupo 6\bin\es\System.Web.Helpers.resources.dll
+C:\Users\asanc\Desktop\Avanzada\repositorio\Progra-Avanzada\Proyecto Grupo 6\bin\es\System.Web.Mvc.resources.dll
+C:\Users\asanc\Desktop\Avanzada\repositorio\Progra-Avanzada\Proyecto Grupo 6\bin\es\System.Web.Razor.resources.dll
+C:\Users\asanc\Desktop\Avanzada\repositorio\Progra-Avanzada\Proyecto Grupo 6\bin\es\System.Web.WebPages.resources.dll
+C:\Users\asanc\Desktop\Avanzada\repositorio\Progra-Avanzada\Proyecto Grupo 6\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\asanc\Desktop\Avanzada\repositorio\Progra-Avanzada\Proyecto Grupo 6\bin\es\System.Web.WebPages.Razor.resources.dll

@@ -61,5 +61,19 @@ namespace Proyecto_Grupo_6.Controllers
             return View("checkout");
         }
 
+        public ActionResult Registro()
+        {
+
+            return View("Registro");
+        }
+
+
+        public ActionResult IniciarSesion()
+        {
+
+            return View("IniciarSesion");
+        }
+
+
     }
 }
