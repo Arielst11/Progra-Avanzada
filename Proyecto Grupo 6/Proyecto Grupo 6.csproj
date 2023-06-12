@@ -186,6 +186,9 @@
     <Content Include="WebItems\img\categories\cat-3.jpg" />
     <Content Include="WebItems\img\categories\cat-4.jpg" />
     <Content Include="WebItems\img\categories\cat-5.jpg" />
+    <Content Include="WebItems\img\llaves.png" />
+    <Content Include="WebItems\img\Logo.png" />
+    <Content Include="WebItems\img\logoPagina.png" />
     <Content Include="WebItems\img\featured\feature-1.jpg" />
     <Content Include="WebItems\img\featured\feature-2.jpg" />
     <Content Include="WebItems\img\featured\feature-3.jpg" />
@@ -208,7 +211,6 @@
     <Content Include="WebItems\img\latest-product\lp-1.jpg" />
     <Content Include="WebItems\img\latest-product\lp-2.jpg" />
     <Content Include="WebItems\img\latest-product\lp-3.jpg" />
-    <Content Include="WebItems\img\logo.png" />
     <Content Include="WebItems\img\payment-item.png" />
     <Content Include="WebItems\img\product\details\product-details-1.jpg" />
     <Content Include="WebItems\img\product\details\product-details-2.jpg" />

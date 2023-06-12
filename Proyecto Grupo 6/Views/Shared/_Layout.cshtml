@@ -62,7 +62,6 @@
                 <li>@Html.ActionLink("Carrito de compras", "shopingCart", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Checkout", "checkout", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("Iniciar Sesión", "IniciarSesion", "Store", new { area = "" }, new { @class = "nav-link" })</li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -82,15 +81,21 @@
     <!-- Humberger End -->
     <!-- Header Section Begin -->
     <header class="header">
+
         <div class="header__top">
+            
             <div class="container">
+                
+
                 <div class="row">
+
                     <div class="col-lg-6 col-md-6">
+
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> ejemplo@gmail.com</li>
-                                <li>Bienvenidos</li>
-                            </ul>
+                                <img src="~/WebItems/img/Logo.png" width="110" height="130" />
+                                <li><i class="fa fa-envelope"></i> repuestos@gmail.com</li>
+                                <li><h4>Bienvenidos</h4></li></ul>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -103,13 +108,27 @@
                             </div>
 
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Iniciar Sesión</a>
+
+                                <!--Vistas modo escritorio -->
+                                <a<li>@Html.ActionLink("Iniciar Sesión", "IniciarSesion", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+
+
                             </div>
+                            <div class="header__top__right__auth">
+                                <a <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li></a>
+                            </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
-        </div>
+
+    
+</header>
+    <nav>
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
@@ -117,7 +136,7 @@
                         <a href="./index.html">@*<img src="img/logo.png" alt="">*@</a>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <nav class="header__menu">
                         <ul>
                             <!-- Aqui se agregan los enlace al controlador y del controlador a las vistas modo escritorio -->
@@ -125,11 +144,7 @@
                             <li>@Html.ActionLink("Blog", "blog", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Contacto", "contact", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Tienda", "Shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                            <li>@Html.ActionLink("Detalles de compra", "shopDetails", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                            <li>@Html.ActionLink("Carrito de compras", "shopingCart", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                            <li>@Html.ActionLink("Checkout", "checkout", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                            <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                            <li>@Html.ActionLink("Iniciar Sesión", "IniciarSesion", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+
 
                         </ul>
                     </nav>
@@ -137,8 +152,12 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+
+                            <li><a href="@Url.Action("shopDetails", "Store")"><i class="fa fa-heart"></i> <span>3</span></a></li>
+
+                            <li><a href="@Url.Action("shopingCart", "Store")"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+
+
                         </ul>
                         <div class="header__cart__price">item: <span>$150.00</span></div>
                     </div>
@@ -147,8 +166,11 @@
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
+            <hr />
         </div>
-    </header>
+    </nav>
+   
+    <br />
     <!-- Header Section End -->
     <!-- Aqui se agregan las vistas!!!!!!! -->
 

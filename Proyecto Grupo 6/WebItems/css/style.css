@@ -255,7 +255,7 @@ ol {
 }
 
 .header__top__left {
-	padding: 10px 0 13px;
+	padding: 10px 0 10px;
 }
 
 .header__top__left ul li {
@@ -390,7 +390,7 @@ ol {
 .header__top__right__language ul li a {
 	font-size: 14px;
 	color: #ffffff;
-	padding: 5px 10px;
+	padding: 5px 5px;
 }
 
 .header__top__right__auth {
@@ -408,7 +408,7 @@ ol {
 }
 
 .header__logo {
-	padding: 15px 0;
+	padding: 10px 0;
 }
 
 .header__logo a {
@@ -416,7 +416,7 @@ ol {
 }
 
 .header__menu {
-	padding: 24px 0;
+	padding: 14px 0;
 }
 
 .header__menu ul li {
@@ -488,7 +488,7 @@ ol {
 	-ms-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
-	padding: 5px 0;
+	padding: 3px 0;
 	display: block;
 }
 

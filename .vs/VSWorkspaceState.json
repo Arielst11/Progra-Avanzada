@@ -3,8 +3,9 @@
     "",
     "\\Proyecto Grupo 6",
     "\\Proyecto Grupo 6\\Views",
+    "\\Proyecto Grupo 6\\Views\\Shared",
     "\\Proyecto Grupo 6\\Views\\Store"
   ],
-  "SelectedNode": "\\Proyecto Grupo 6\\Proyecto Grupo 6.sln",
+  "SelectedNode": "\\Proyecto Grupo 6\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }
