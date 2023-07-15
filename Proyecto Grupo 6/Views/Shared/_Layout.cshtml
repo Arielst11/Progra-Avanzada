@@ -93,9 +93,10 @@
 
                         <div class="header__top__left">
                             <ul>
-                                <img src="~/WebItems/img/Logo.png" width="110" height="130" />
+                               <li><img src="~/WebItems/img/Logo.png" width="110" height="130" /></li> 
                                 <li><i class="fa fa-envelope"></i> repuestos@gmail.com</li>
-                                <li><h4>Bienvenidos</h4></li></ul>
+                                <li><h4>Bienvenidos</h4></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -110,12 +111,14 @@
                             <div class="header__top__right__auth">
 
                                 <!--Vistas modo escritorio -->
-                                <a<li>@Html.ActionLink("Iniciar Sesión", "IniciarSesion", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-
-
-                            </div>
+                                <ul>
+                                    <li>@Html.ActionLink("Iniciar Sesión", "IniciarSesion", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                                    </ul>
+</div>
                             <div class="header__top__right__auth">
-                                <a <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li></a>
+                                <ul>
+                                    <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                                </ul>
                             </div>
 
                         </div>
@@ -125,7 +128,7 @@
                 </div>
 
             </div>
-
+            </div>
     
 </header>
     <nav>
@@ -143,10 +146,13 @@
                             <li>@Html.ActionLink("Inicio", "index", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Blog", "blog", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Contacto", "contact", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                            <li>@Html.ActionLink("Tienda", "Shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-
-
+                            <li>@Html.ActionLink("Tienda", "shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Detalles de compra", "shopDetails", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Carrito de compras", "shopingCart", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Checkout", "checkout", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                         </ul>
+                        
                     </nav>
                 </div>
                 <div class="col-lg-3">
