@@ -24,7 +24,7 @@ namespace API_Proyecto_Grupo_6.Controllers
                 tabla.Email = entidad.Email;
                 tabla.Estado = entidad.Estado;
                 tabla.IdRol = entidad.IdRol;
-                
+
                 bd.User.Add(tabla);
                 return bd.SaveChanges();
             }
@@ -32,7 +32,47 @@ namespace API_Proyecto_Grupo_6.Controllers
         }
 
 
+        [HttpPost]
+        [Route("api/IniciarSesion")]
+        public UserEnt IniciarSesion(UserEnt entidad)
+        {
+            using (var bd = new ProyectoPrograEntities())
+            {
+                var datos = (from x in bd.User
+                             where x.Email == entidad.Email
+                                && x.Password == entidad.Password
+                             select x).FirstOrDefault();
 
 
+                if (datos != null)
+                {
+                    /*
+                    if (datos.ClaveTemporal.Value && datos.Caducidad < DateTime.Now)
+                    {
+                        return null;
+                    }
+                    */
+                    UserEnt resp = new UserEnt();
+                    resp.UserID = datos.UserID;
+                    resp.Name = datos.Name;
+                    resp.Email = datos.Email;
+                    resp.Estado = datos.Estado;
+                    resp.IdRol = datos.IdRol;
+                    return resp;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+
+
+
+
+
+
+
+        }
     }
 }
+

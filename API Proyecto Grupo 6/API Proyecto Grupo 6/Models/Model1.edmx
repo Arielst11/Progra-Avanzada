@@ -60,8 +60,8 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
           <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Estado" Type="bit" Nullable="false" />
           <Property Name="IdRol" Type="int" Nullable="false" />
-          <Property Name="newPassword" Type="varchar" MaxLength="200" />
-          <Property Name="newPasswordConfirmed" Type="varchar" MaxLength="200" />
+          <Property Name="ClaveTemporal" Type="bit" />
+          <Property Name="Caducidad" Type="datetime" />
         </EntityType>
         <Association Name="FK_User_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -127,8 +127,8 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Boolean" Nullable="false" />
           <Property Name="IdRol" Type="Int32" Nullable="false" />
-          <Property Name="newPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="newPasswordConfirmed" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ClaveTemporal" Type="Boolean" />
+          <Property Name="Caducidad" Type="DateTime" Precision="3" />
           <NavigationProperty Name="User1" Relationship="Self.FK_User_User" FromRole="User" ToRole="User1" />
           <NavigationProperty Name="User2" Relationship="Self.FK_User_User" FromRole="User1" ToRole="User" />
         </EntityType>
@@ -210,8 +210,8 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="IdRol" ColumnName="IdRol" />
-                <ScalarProperty Name="newPassword" ColumnName="newPassword" />
-                <ScalarProperty Name="newPasswordConfirmed" ColumnName="newPasswordConfirmed" />
+                <ScalarProperty Name="ClaveTemporal" ColumnName="ClaveTemporal" />
+                <ScalarProperty Name="Caducidad" ColumnName="Caducidad" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

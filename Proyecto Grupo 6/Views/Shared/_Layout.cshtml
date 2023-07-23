@@ -62,7 +62,11 @@
                 <li>@Html.ActionLink("Carrito de compras", "shopingCart", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Checkout", "checkout", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-            </ul>
+                @if (Session["idRolUsuario"] != null)
+                {
+                    <li>@Html.ActionLink("Cerrar Sesión", "cerrarSesion", "User", new { area = "" }, new { @class = "nav-link" })</li>
+                }
+                </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="header__top__right__social">
@@ -86,16 +90,24 @@
             
             <div class="container">
                 
-
+                
                 <div class="row">
 
                     <div class="col-lg-6 col-md-6">
 
                         <div class="header__top__left">
                             <ul>
-                               <li><img src="~/WebItems/img/Logo.png" width="110" height="130" /></li> 
+                                <li><img src="~/WebItems/img/Logo.png" width="110" height="130" /></li>
                                 <li><i class="fa fa-envelope"></i> repuestos@gmail.com</li>
-                                <li><h4>Bienvenidos</h4></li>
+                                @if (Session["idRolUsuario"] == null)
+                                {
+                                    <li><h4>Bienvenidos</h4></li>
+                                }
+                                else
+                                {
+                                    <li><h4>Bienvenido @Session["NombreRolUsuario"] @Session["NombreUsuario"]</h4></li>
+                                }
+
                             </ul>
                         </div>
                     </div>
@@ -151,7 +163,11 @@
                             <li>@Html.ActionLink("Carrito de compras", "shopingCart", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Checkout", "checkout", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                        </ul>
+                            @if (Session["idRolUsuario"] != null)
+                            {
+                                <li>@Html.ActionLink("Cerrar Sesión", "cerrarSesion", "User", new { area = "" }, new { @class = "nav-link" })</li>
+                            }
+                            </ul>
                         
                     </nav>
                 </div>

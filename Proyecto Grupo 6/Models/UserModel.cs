@@ -31,5 +31,25 @@ namespace Proyecto_Grupo_6.Models
             }
         }
 
+        public UserEnt IniciarSesion(UserEnt entidad)
+        {
+            using (var client = new HttpClient())
+            {
+                string url = ConfigurationManager.AppSettings["urlApiAriel"].ToString() + "api/IniciarSesion";
+                JsonContent body = JsonContent.Create(entidad); //Serializar
+                HttpResponseMessage resp = client.PostAsync(url, body).Result;
+
+                if (resp.IsSuccessStatusCode)
+                {
+                    return resp.Content.ReadFromJsonAsync<UserEnt>().Result;
+                }
+
+                return null;
+            }
+        }
+
+
+
+
     }
 }

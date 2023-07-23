@@ -38,5 +38,47 @@ namespace Proyecto_Grupo_6.Controllers
             }
         }
 
+        [HttpPost]
+        public ActionResult IniciarSesion(UserEnt entidad)
+        {
+            var resp = modeloUsuario.IniciarSesion(entidad);
+
+            if (resp != null)
+            {
+                Session["IdUsuario"] = resp.UserID;
+                Session["CorreoUsuario"] = resp.Email;
+                Session["NombreUsuario"] = resp.Name;
+                Session["idRolUsuario"] = resp.IdRol;
+                if (resp.IdRol == 1)
+                {
+                    Session["NombreRolUsuario"] = "Administrador";
+                } else if(resp.IdRol == 2)
+                {
+                    Session["NombreRolUsuario"] = "Cliente";
+                }
+                else
+                {
+                    Session["NombreRolUsuario"] = "?"; // esto no deberia suceder.
+                }
+
+                return RedirectToAction("index", "Store");
+            }
+            else
+            {
+                ViewBag.MsjPantalla = "No se ha podido validar su información";
+                return RedirectToAction("index", "Store");
+            }
+        }
+
+        [HttpGet]
+        public ActionResult CerrarSesion()
+        {
+            Session.Clear();
+            return RedirectToAction("index", "Store");
+        }
+
+
+
+
     }
 }
