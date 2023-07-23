@@ -20,6 +20,8 @@ namespace API_Proyecto_Grupo_6.Models
         public string Email { get; set; }
         public bool Estado { get; set; }
         public int IdRol { get; set; }
+        public string newPassword { get; set; }
+        public string newPasswordConfirmed { get; set; }
     
         public virtual User User1 { get; set; }
         public virtual User User2 { get; set; }

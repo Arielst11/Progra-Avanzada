@@ -18,6 +18,8 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="newPassword" ColumnName="newPassword" />
+          <ScalarProperty Name="newPasswordConfirmed" ColumnName="newPasswordConfirmed" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

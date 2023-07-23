@@ -55,6 +55,8 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
     <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Estado" Type="bit" Nullable="false" />
     <Property Name="IdRol" Type="int" Nullable="false" />
+    <Property Name="newPassword" Type="varchar" MaxLength="200" />
+    <Property Name="newPasswordConfirmed" Type="varchar" MaxLength="200" />
   </EntityType>
   <Association Name="FK_User_User">
     <End Role="User" Type="Self.User" Multiplicity="1" />

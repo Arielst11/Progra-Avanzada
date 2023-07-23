@@ -13,6 +13,11 @@ namespace API_Proyecto_Grupo_6.Entities
         public string Email { get; set; }
         public  Boolean Estado { get; set; }
         public int IdRol { get; set; }
+        public string newPassword { get; set; }
+        public string newPasswordConfirmed { get; set; }
+
+
+
 
     }
 }
