@@ -13,10 +13,10 @@ namespace API_Proyecto_Grupo_6.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ProyectoPrograEntities : DbContext
+    public partial class ProyectoPrograEntities1 : DbContext
     {
-        public ProyectoPrograEntities()
-            : base("name=ProyectoPrograEntities")
+        public ProyectoPrograEntities1()
+            : base("name=ProyectoPrograEntities1")
         {
         }
     
@@ -25,10 +25,9 @@ namespace API_Proyecto_Grupo_6.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Category> Category { get; set; }
-        public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<Products> Products { get; set; }
-        public virtual DbSet<PurchanseOrder> PurchanseOrder { get; set; }
-        public virtual DbSet<Rol> Rol { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<PurchanseOrder> PurchanseOrders { get; set; }
+        public virtual DbSet<Rol> Rols { get; set; }
     }
 }

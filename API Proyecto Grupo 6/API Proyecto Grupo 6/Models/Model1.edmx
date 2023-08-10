@@ -5,13 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="ProyectoPrograModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Category">
-          <Key>
-            <PropertyRef Name="CategoryId" />
-          </Key>
-          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CategoryName" Type="varchar" MaxLength="50" Nullable="false" />
-        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'ProyectoProgra.dbo.Products' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Products">
@@ -20,17 +13,11 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Products' does not have a prima
             <PropertyRef Name="ProductName" />
             <PropertyRef Name="Description" />
             <PropertyRef Name="Price" />
-            <PropertyRef Name="UserId" />
-            <PropertyRef Name="CategoyId" />
-            <PropertyRef Name="PurchanseOrderId" />
           </Key>
           <Property Name="ProductId" Type="int" Nullable="false" />
           <Property Name="ProductName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
-          <Property Name="UserId" Type="int" Nullable="false" />
-          <Property Name="CategoyId" Type="int" Nullable="false" />
-          <Property Name="PurchanseOrderId" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'ProyectoProgra.dbo.PurchanseOrder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -60,8 +47,6 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
           <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Estado" Type="bit" Nullable="false" />
           <Property Name="IdRol" Type="int" Nullable="false" />
-          <Property Name="ClaveTemporal" Type="bit" />
-          <Property Name="Caducidad" Type="datetime" />
         </EntityType>
         <Association Name="FK_User_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
@@ -76,17 +61,13 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ProyectoPrograModelStoreContainer">
-          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Products].[ProductId] AS [ProductId], 
     [Products].[ProductName] AS [ProductName], 
     [Products].[Description] AS [Description], 
-    [Products].[Price] AS [Price], 
-    [Products].[UserId] AS [UserId], 
-    [Products].[CategoyId] AS [CategoyId], 
-    [Products].[PurchanseOrderId] AS [PurchanseOrderId]
+    [Products].[Price] AS [Price]
     FROM [dbo].[Products] AS [Products]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="PurchanseOrder" EntityType="Self.PurchanseOrder" store:Type="Tables" store:Schema="dbo">
@@ -110,13 +91,6 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ProyectoPrograModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Category">
-          <Key>
-            <PropertyRef Name="CategoryId" />
-          </Key>
-          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserID" />
@@ -127,28 +101,20 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Estado" Type="Boolean" Nullable="false" />
           <Property Name="IdRol" Type="Int32" Nullable="false" />
-          <Property Name="ClaveTemporal" Type="Boolean" />
-          <Property Name="Caducidad" Type="DateTime" Precision="3" />
           <NavigationProperty Name="User1" Relationship="Self.FK_User_User" FromRole="User" ToRole="User1" />
           <NavigationProperty Name="User2" Relationship="Self.FK_User_User" FromRole="User1" ToRole="User" />
         </EntityType>
-        <EntityType Name="Products">
+        <EntityType Name="Product">
           <Key>
             <PropertyRef Name="ProductId" />
             <PropertyRef Name="ProductName" />
             <PropertyRef Name="Description" />
             <PropertyRef Name="Price" />
-            <PropertyRef Name="UserId" />
-            <PropertyRef Name="CategoyId" />
-            <PropertyRef Name="PurchanseOrderId" />
           </Key>
           <Property Name="ProductId" Type="Int32" Nullable="false" />
           <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Price" Type="Int32" Nullable="false" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
-          <Property Name="CategoyId" Type="Int32" Nullable="false" />
-          <Property Name="PurchanseOrderId" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="PurchanseOrder">
           <Key>
@@ -176,15 +142,14 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ProyectoPrograEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Category" EntityType="Self.Category" />
-          <EntitySet Name="User" EntityType="Self.User" />
-          <EntitySet Name="Products" EntityType="Self.Products" />
-          <EntitySet Name="PurchanseOrder" EntityType="Self.PurchanseOrder" />
-          <EntitySet Name="Rol" EntityType="Self.Rol" />
+        <EntityContainer Name="ProyectoPrograEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="PurchanseOrders" EntityType="Self.PurchanseOrder" />
+          <EntitySet Name="Rols" EntityType="Self.Rol" />
           <AssociationSet Name="FK_User_User" Association="Self.FK_User_User">
-            <End Role="User" EntitySet="User" />
-            <End Role="User1" EntitySet="User" />
+            <End Role="User" EntitySet="Users" />
+            <End Role="User1" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -192,16 +157,8 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ProyectoPrograModelStoreContainer" CdmEntityContainer="ProyectoPrograEntities">
-          <EntitySetMapping Name="Category">
-            <EntityTypeMapping TypeName="ProyectoPrograModel.Category">
-              <MappingFragment StoreEntitySet="Category">
-                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
-                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="User">
+        <EntityContainerMapping StorageEntityContainer="ProyectoPrograModelStoreContainer" CdmEntityContainer="ProyectoPrograEntities1">
+          <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="ProyectoPrograModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -210,32 +167,27 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="IdRol" ColumnName="IdRol" />
-                <ScalarProperty Name="ClaveTemporal" ColumnName="ClaveTemporal" />
-                <ScalarProperty Name="Caducidad" ColumnName="Caducidad" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="ProyectoPrograModel.Products">
+            <EntityTypeMapping TypeName="ProyectoPrograModel.Product">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="CategoyId" ColumnName="CategoyId" />
-                <ScalarProperty Name="PurchanseOrderId" ColumnName="PurchanseOrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PurchanseOrder">
+          <EntitySetMapping Name="PurchanseOrders">
             <EntityTypeMapping TypeName="ProyectoPrograModel.PurchanseOrder">
               <MappingFragment StoreEntitySet="PurchanseOrder">
                 <ScalarProperty Name="PurchanseOrderId" ColumnName="PurchanseOrderId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Rol">
+          <EntitySetMapping Name="Rols">
             <EntityTypeMapping TypeName="ProyectoPrograModel.Rol">
               <MappingFragment StoreEntitySet="Rol">
                 <ScalarProperty Name="IdRol" ColumnName="IdRol" />
@@ -257,7 +209,7 @@ warning 6002: The table/view 'ProyectoProgra.dbo.Rol' does not have a primary ke
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
