@@ -81,6 +81,11 @@ namespace Proyecto_Grupo_6.Controllers
             return View("IniciarSesion");
         }
 
+        public ActionResult ViewBlog()
+        {
+
+            return View("ViewBlog");
+        }
 
         public ActionResult menuAdmin()
         {

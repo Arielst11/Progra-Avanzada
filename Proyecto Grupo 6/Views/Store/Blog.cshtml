@@ -24,7 +24,6 @@
                     <div class="blog__sidebar__item">
                         <h4>Noticias Recientes</h4>
                         <div class="blog__sidebar__recent">
-                            <a href="#" class="blog__sidebar__recent__item">
                                 <div class="blog__sidebar__recent__item__pic">
                                     <img src="~/WebItems/img/imgBlog/noticia1.jpg" width="100" height="55">
                                 </div>
@@ -32,8 +31,7 @@
                                     <h6>Llega el repuesto inteligente<br /> Sensores y microchips</h6>
                                     <span>MAR 05, 2019</span>
                                 </div>
-                            </a>
-                            <a href="#" class="blog__sidebar__recent__item">
+                            
                                 <div class="blog__sidebar__recent__item__pic">
                                     <img src="~/WebItems/img/imgBlog/noticia2.jpg" width="100" height="55">
                                 </div>
@@ -41,8 +39,6 @@
                                     <h6>Repuestos económicos<br /> Calidad a precios accesibles</h6>
                                     <span>MAR 05, 2019</span>
                                 </div>
-                            </a>
-                            <a href="#" class="blog__sidebar__recent__item">
                                 <div class="blog__sidebar__recent__item__pic">
                                     <img src="~/WebItems/img/imgBlog/noticia3.png" width="100" height="55">
                                 </div>
@@ -50,7 +46,7 @@
                                     <h6>Repuestos universales <br />Nuevo articulo</h6>
                                     <span>MAR 05, 2019</span>
                                 </div>
-                            </a>
+                            
                         </div>
                     </div>
                     <div class="blog__sidebar__item">
@@ -82,7 +78,9 @@
                                 <p>
                                     Las baterías de automóviles suelen durar entre 3 y 5 años. Sin embargo, esto puede variar dependiendo de la marca, calidad y condiciones de uso. Un mantenimiento adecuado y la carga regular pueden extender su vida útil.
                                 </p>
-                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+
+                                <a href="/Views/Store/ViewBlog.cshtml" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+
                             </div>
                         </div>
                     </div>
@@ -173,7 +171,7 @@
                                 <p>
                                     En general, los amortiguadores pueden durar entre 80,000 y 160,000 kilómetros.
                                 </p>
-                                <a href="#" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+                                <a href="#" class="blog__btn"  onclick="showModal('modal1');"; >READ MORE <span class="arrow_right"></span></a>
                             </div>
                         </div>
                     </div>
@@ -183,4 +181,28 @@
         </div>
     </div>
 </section>
+
+<center>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal('modal1');">&times;</span>
+            <h2>Título del tema 1</h2>
+            <p>Información detallada sobre el tema 1.</p>
+        </div>
+    </div>
+</center>
+
+<script>
+    // Función para mostrar el modal
+    function showModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+    }
+
+    // Función para ocultar el modal
+    function hideModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none";
+    }
+</script>
 <!-- Blog Section End -->
