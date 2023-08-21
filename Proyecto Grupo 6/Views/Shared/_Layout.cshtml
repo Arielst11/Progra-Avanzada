@@ -59,9 +59,9 @@
                 <li>@Html.ActionLink("Contacto", "contact", "Store", new { area = "" }, new { @class = "nav-link" })</li>
 
                 @if (Session["idRolUsuario"] != null)
-                    { }
-                    <li>@Html.ActionLink("Tienda", "shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                
+                { 
+                <li>@Html.ActionLink("Tienda", "shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                }
 
 
 
@@ -175,9 +175,9 @@
                             <li>@Html.ActionLink("Blog", "blog", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Contacto", "contact", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             @if (Session["idRolUsuario"] != null)
-                            { }
-                                <li>@Html.ActionLink("Tienda", "shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
-                            
+                            { 
+                            <li>@Html.ActionLink("Tienda", "shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            }
                             <li>@Html.ActionLink("Detalles de compra", "shopDetails", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Carrito de compras", "shopingCart", "Store", new { area = "" }, new { @class = "nav-link" })</li>
                             <li>@Html.ActionLink("Checkout", "checkout", "Store", new { area = "" }, new { @class = "nav-link" })</li>
