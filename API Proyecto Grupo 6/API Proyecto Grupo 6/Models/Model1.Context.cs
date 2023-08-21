@@ -25,6 +25,8 @@ namespace API_Proyecto_Grupo_6.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Carrito> Carrito { get; set; }
+        public virtual DbSet<Compra> Compra { get; set; }
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }

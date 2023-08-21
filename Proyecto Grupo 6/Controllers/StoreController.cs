@@ -124,5 +124,26 @@ namespace Proyecto_Grupo_6.Controllers
         }
 
 
+
+        // mismo metodo que el articulocontroller para retornar un articulo ent de la base de datos
+        // se puede usar el mismo metodo de actualizar articulo, en realidad este metodo solo retornar el articulo de la base de datos con id = q
+        [HttpGet]
+        public ActionResult AgregarArticuloCarrito(long q)
+        {
+            var articuloEntidad = modeloArticulo.ActualizarArticulo(q);
+
+            if (articuloEntidad.ProductId == null)
+            {
+                return RedirectToAction("shop", "Store"); // esto no deberia pasar....
+            }
+
+            return View("FormularioConfirmarAgregarAlCarrito", articuloEntidad);
+        }
+
+
+
+
+
+
     }
 }

@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ProyectoPrograModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Carrito">
+    <Key>
+      <PropertyRef Name="carritoId" />
+    </Key>
+    <Property Name="carritoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Compra">
+    <Key>
+      <PropertyRef Name="CompraId" />
+    </Key>
+    <Property Name="CompraId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Destino" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Int32" />
+  </EntityType>
   <EntityType Name="Products">
     <Key>
       <PropertyRef Name="ProductId" />
@@ -46,6 +66,8 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ProyectoPrograEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Carrito" EntityType="Self.Carrito" />
+    <EntitySet Name="Compra" EntityType="Self.Compra" />
     <EntitySet Name="Products" EntityType="Self.Products" />
     <EntitySet Name="User" EntityType="Self.User" />
     <EntitySet Name="Rol" EntityType="Self.Rol" />

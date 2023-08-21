@@ -151,14 +151,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArticuloCarritoController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\ArticuloController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Entities\ArticuloCarritoEnt.cs" />
     <Compile Include="Entities\ArticuloEnt.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Entities\UserEnt.cs" />
+    <Compile Include="Models\ArticuloCarritoModel.cs" />
     <Compile Include="Models\ArticuloModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -352,6 +355,7 @@
     <Content Include="Views\Store\BorrarArticulo.cshtml" />
     <Content Include="Views\Store\ActualizarArticulo.cshtml" />
     <Content Include="Views\Store\FormularioArticuloActualizar.cshtml" />
+    <Content Include="Views\Store\FormularioConfirmarAgregarAlCarrito.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
