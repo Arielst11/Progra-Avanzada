@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda grupo 6</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+   
+
+    <link href="~/WebItems/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/elegant-icons.css" rel="stylesheet" />
+    <link href="~/WebItems/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/nice-select.css" rel="stylesheet" />
+    <link href="~/WebItems/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/WebItems/css/style.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#">@*<img src="img/logo.png" alt="">*@</a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">Total: <span>$150.00</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i> Login</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <!-- Aqui se agregan los enlace al controlador y del controlador a las vistas modo cel -->
+                <li>@Html.ActionLink("Inicio", "index", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Blog", "blog", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Contacto", "contact", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Tienda", "shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Detalles de compra", "shopDetails", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Carrito de compras", "shopingCart", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Checkout", "checkout", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                @if (Session["idRolUsuario"] != null)
+                {
+                    <li>@Html.ActionLink("Cerrar Sesión", "cerrarSesion", "User", new { area = "" }, new { @class = "nav-link" })</li>
+                }
+
+                @if (Session["idRolUsuario"] != null)
+                {
+                    if (Session["idRolUsuario"].ToString() == "1")
+                    {
+                        <li>@Html.ActionLink("Menu Administrador", "menuAdmin", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                }
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+
+        <div class="header__top">
+            
+            <div class="container">
+                
+                
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6">
+
+                        <div class="header__top__left">
+                            <ul>
+                                <li><img src="~/WebItems/img/Logo.png" width="110" height="130" /></li>
+                                <li><i class="fa fa-envelope"></i> repuestos@gmail.com</li>
+                                @if (Session["idRolUsuario"] == null)
+                                {
+                                    <li><h4>Bienvenidos</h4></li>
+                                }
+                                else
+                                {
+                                    <li><h4>Bienvenido @Session["NombreRolUsuario"] @Session["NombreUsuario"]</h4></li>
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+
+                            <div class="header__top__right__auth">
+
+                                <!--Vistas modo escritorio -->
+                                <ul>
+                                    <li>@Html.ActionLink("Iniciar Sesión", "IniciarSesion", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                                    </ul>
+</div>
+                            <div class="header__top__right__auth">
+                                <ul>
+                                    <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+    
+</header>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html">@*<img src="img/logo.png" alt="">*@</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <nav class="header__menu">
+                        <ul>
+                            <!-- Aqui se agregan los enlace al controlador y del controlador a las vistas modo escritorio -->
+                            <li>@Html.ActionLink("Inicio", "index", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Blog", "blog", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Contacto", "contact", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Tienda", "shop", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Detalles de compra", "shopDetails", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Carrito de compras", "shopingCart", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Checkout", "checkout", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Registrarse", "Registro", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                            @if (Session["idRolUsuario"] != null)
+                            {
+                                <li>@Html.ActionLink("Cerrar Sesión", "cerrarSesion", "User", new { area = "" }, new { @class = "nav-link" })</li>
+                            }
+                            @if (Session["idRolUsuario"] != null)
+                            {
+                                if (Session["idRolUsuario"].ToString() == "1")
+                                {
+                                    <li>@Html.ActionLink("Menu Administrador", "menuAdmin", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+                                }
+                            }
+                        </ul>
+                        
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__cart">
+                        <ul>
+
+                            <li><a href="@Url.Action("shopDetails", "Store")"><i class="fa fa-heart"></i> <span>3</span></a></li>
+
+                            <li><a href="@Url.Action("shopingCart", "Store")"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+
+
+                        </ul>
+                        <div class="header__cart__price">item: <span>$150.00</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+            <hr />
+        </div>
+    </nav>
+   
+    <br />
+    <!-- Header Section End -->
+    <!-- Aqui se agregan las vistas!!!!!!! -->
+
+    @RenderBody()
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html">@*<img src="img/logo.png" alt="">*@</a>
+                        </div>
+                        <ul>
+                            <li>Dirección: San José Costa Rica</li>
+                            <li>Tel: 88888888</li>
+                            <li>Correo: ejemplo@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Links interesantes</h6>
+                        <ul>
+
+                            <li>@Html.ActionLink("Contacto", "contact", "Store", new { area = "" }, new { @class = "nav-link" })</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> derechos reservados | plantilla creada por <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="footer__copyright__payment">@*<img src="img/payment-item.png" alt="">*@</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="~/WebItems/js/jquery-3.3.1.min.js"></script>
+    <script src="~/WebItems/js/bootstrap.min.js"></script>
+    <script src="~/WebItems/js/jquery.nice-select.min.js"></script>
+    <script src="~/WebItems/js/jquery-ui.min.js"></script>
+    <script src="~/WebItems/js/jquery.slicknav.js"></script>
+    <script src="~/WebItems/js/mixitup.min.js"></script>
+    <script src="~/WebItems/js/owl.carousel.min.js"></script>
+    <script src="~/WebItems/js/main.js"></script>
+
+</body>
+
+</html>

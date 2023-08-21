@@ -1,0 +1,82 @@
+@model Proyecto_Grupo_6.Entities.ArticuloEnt 
+
+@{
+
+}
+<!-- Titulo e imagen -->
+<section class="breadcrumb-section set-bg" data-setbg="/WebItems/img/banner.JPG">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Agregar artículos</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Titulo e imagen fin -->
+<!-- Menu ADMIN-->
+
+@if (ViewBag.MsjPantallaArticuloAgregado != null)
+{
+
+    <div style="text-align:center" class="alert alert-warning" role="alert">
+        ViewBag.MsjPantallaArticuloAgregado
+    </div>
+
+}
+
+
+@using (Html.BeginForm("AgregarArticulo", "Articulo", FormMethod.Post))
+{
+
+
+
+    <h3 style="color: forestgreen !important" class="text-primary">Ingrese un Artículo</h3>
+
+
+
+    <div class="form-floating mb-3">
+        @Html.TextBoxFor(m => m.ProductName, new { @type = "text", @class = "form-control", placeholder = "Nombre" })
+        <label for="floatingInput">Nombre</label>
+    </div>
+    <div class="form-floating mb-3">
+        @Html.TextBoxFor(m => m.Description, new { @type = "text", @class = "form-control", placeholder = "Descripción" })
+        <label for="floatingInput">Descripción</label>
+    </div>
+    <div class="form-floating mb-3">
+        @Html.TextBoxFor(m => m.Price, new { @type = "text", @class = "form-control", placeholder = "Precio" })
+        <label for="floatingInput">Precio</label>
+    </div>
+    <div class="form-floating mb-3">
+        @Html.TextBoxFor(m => m.Image, new { @type = "text", @class = "form-control", placeholder = "Imagen URL Firebase" })
+        <label for="floatingInput">URL imagen</label>
+    </div>
+
+
+    <button style="background-color: forestgreen !important" type="submit" class="btn btn-primary py-3 w-100 mb-4">Agregar</button>
+
+}
+
+<hr />
+
+
+<section class="breadcrumb-section set-bg" data-setbg="/WebItems/img/banner.JPG">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>artículos en la base de datos</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr />
+
+
+
