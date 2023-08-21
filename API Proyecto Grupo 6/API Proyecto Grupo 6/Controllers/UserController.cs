@@ -65,13 +65,37 @@ namespace API_Proyecto_Grupo_6.Controllers
                     return null;
                 }
             }
+        }
 
+        [HttpPost]
+        [Route("api/RecuperarClave")]
+        [AllowAnonymous]
+        public bool RecuperarClave(UserEnt entidad)
+        {
+            UtilitariosModel util = new UtilitariosModel();
 
+            using (var bd = new ProyectoPrograEntities())
+            {
+                var datos = (from x in bd.User
+                             where x.Email == entidad.Email
+                                           && x.Estado == true
+                             select x).FirstOrDefault();
 
+                if (datos != null)
+                {
+                    string pass = util.CreatePassword();
+                    string mensaje = "Estimado(a): " + datos.Name + ". Se ha generado la siguiente contraseña temporal: " + pass + " valida por los siguientes 15 minutos";
+                    util.SendEmail(datos.Email, "Recuperar Contraseña", mensaje);
 
-
-
-
+                    //Update de LiQ
+                    datos.Password = pass;
+                    datos.ClaveTemporal = true;
+                    datos.Caducidad = DateTime.Now.AddMinutes(15);
+                    bd.SaveChanges();
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

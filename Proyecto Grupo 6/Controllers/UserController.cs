@@ -71,7 +71,26 @@ namespace Proyecto_Grupo_6.Controllers
             }
         }
 
-        
+        [HttpGet]
+        public ActionResult Recuperar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult RecuperarClave(UserEnt entidad)
+        {
+            var resp = modeloUsuario.RecuperarClave(entidad);
+
+            if (resp)
+                return RedirectToAction("index", "Store");
+            else
+            {
+                ViewBag.MsjPantalla = "No se ha podido recuperar su acceso";
+                return View("Recuperar");
+            }
+
+        }
 
 
         [HttpGet]

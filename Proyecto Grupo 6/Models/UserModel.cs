@@ -47,9 +47,21 @@ namespace Proyecto_Grupo_6.Models
                 return null;
             }
         }
+        public bool RecuperarClave(UserEnt entidad)
+        {
+            using (var client = new HttpClient())
+            {
+                string url = ConfigurationManager.AppSettings["urlApiAriel"].ToString() + "api/RecuperarClave";
+                JsonContent body = JsonContent.Create(entidad);
+                HttpResponseMessage resp = client.PostAsync(url, body).Result;
 
+                if (resp.IsSuccessStatusCode)
+                {
+                    return resp.Content.ReadFromJsonAsync<bool>().Result;
+                }
 
-
-
+                return false;
+            }
+        }
     }
 }

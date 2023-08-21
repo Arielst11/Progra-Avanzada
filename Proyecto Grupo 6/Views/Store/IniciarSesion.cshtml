@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout - login.cshtml";
 }
 
-@using (Html.BeginForm("IniciarSesion", "User", FormMethod.Post))
+@using (Html.BeginForm("IniciarSesion", "Store", FormMethod.Post))
 {
     <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
         <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
@@ -20,6 +20,12 @@
                 <div class="form-floating mb-4">
                     @Html.TextBoxFor(m => m.Password, new { @type = "password", @class = "form-control", placeholder = "Contraseña" })
                     <label for="floatingPassword">Contraseña</label>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="form-check">
+
+                    </div>
+                    <a href="@Url.Action("Recuperar","Store")">Recuperar Contraseña</a>
                 </div>
                 <button style="background-color: forestgreen !important" type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesión </button>
                 <p class="text-center mb-0">Regresar a  <a style="color: forestgreen !important" href="@Url.Action("index","Store")">Inicio</a></p>
