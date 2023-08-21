@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Proyecto_Grupo_6.Entities.ArticuloEnt>
+
+
+<!-- Titulo e imagen -->
+<section class="breadcrumb-section set-bg" data-setbg="/WebItems/img/banner.JPG">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Editar artículos</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Titulo e imagen fin -->
+<!-- Menu ADMIN-->
+<hr />
+
+<div class="container">
+    <div class="row gx-3 justify-content-center">
+
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Borrar</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ProductId</td>
+                        <td>@item.ProductName</td>
+                        <td>@item.Description</td>
+                        <td>₡@item.Price</td>
+                        <td><img width="40" ; height="35" src="@item.Image"></td>
+                        <td>
+      
+                            <a href="@Url.Action("ActualizarArticuloConId","Store", new { q = item.ProductId })">
+
+                                <img width="40" height="35" class="boton-menu" alt="EditarArticulo" src="@Url.Content("~/WebItems/img/actualizarArticulo.png")">
+                            </a>
+                        </td>
+                    </tr>
+            }
+                </tbody>
+            </table>
+
+
+
+        </div>
+</div>
+
+

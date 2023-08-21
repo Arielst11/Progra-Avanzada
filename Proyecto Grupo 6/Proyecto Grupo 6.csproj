@@ -350,6 +350,8 @@
     <Content Include="Views\Store\MenuAdmin.cshtml" />
     <Content Include="Views\Store\AgregarArticulo.cshtml" />
     <Content Include="Views\Store\BorrarArticulo.cshtml" />
+    <Content Include="Views\Store\ActualizarArticulo.cshtml" />
+    <Content Include="Views\Store\FormularioArticuloActualizar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

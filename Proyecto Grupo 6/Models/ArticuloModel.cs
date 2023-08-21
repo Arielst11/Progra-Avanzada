@@ -67,5 +67,37 @@ namespace Proyecto_Grupo_6.Models
             }
         }
 
+        
+
+
+             public ArticuloEnt ActualizarArticulo(long q)
+        {
+            using (var client = new HttpClient())
+            {
+                string url = ConfigurationManager.AppSettings["urlApiAriel"].ToString() + "api/RetornarArticulo?q=" + q;
+                HttpResponseMessage resp = client.GetAsync(url).Result;
+
+                if (resp.IsSuccessStatusCode)
+                {
+                    return resp.Content.ReadFromJsonAsync<ArticuloEnt>().Result;
+                }
+                return new ArticuloEnt();
+            }
+        }
+
+        
+              public void ActualizarArticuloenbase(ArticuloEnt entidad)
+        {
+            using (var client = new HttpClient())
+            {
+                string url = ConfigurationManager.AppSettings["urlApiAriel"].ToString() + "api/ActualizarArticulo";
+                JsonContent body = JsonContent.Create(entidad); //Serializar
+                HttpResponseMessage resp = client.PutAsync(url, body).Result;
+
+               
+            }
+        }
+
+
     }
 }

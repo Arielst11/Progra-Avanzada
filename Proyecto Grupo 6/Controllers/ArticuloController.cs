@@ -48,17 +48,38 @@ namespace Proyecto_Grupo_6.Controllers
              return RedirectToAction("BorrarArticulo", "Store");
          }
 
-/* 
-          esto lo hace el controlador de shop cuando se carga la view.
-         [HttpGet]
-         public ActionResult ConsultarArticulosYviewArticulos()
-         {
-             var articulosLista = modeloArticulo.ConsultaCursos();
 
-             return View("../Views/Store/Shop", articulosLista);
-         }
+        [HttpGet]
+        public ActionResult ActualizarArticulo(long q)
+        {
+            var resp = modeloArticulo.ActualizarArticulo(q);
 
-         */
+            return RedirectToAction("FormularioArticuloActualizar", "Store");
+        }
+
+        
+
+
+            [HttpPost]
+        public ActionResult ActualizarArticuloEnBasedeDatos(ArticuloEnt entidad)
+        {
+          
+            modeloArticulo.ActualizarArticuloenbase(entidad);
+            return RedirectToAction("ActualizarArticulo", "Store");
+           
+        }
+
+        /* 
+                  esto lo hace el controlador de shop cuando se carga la view.
+                 [HttpGet]
+                 public ActionResult ConsultarArticulosYviewArticulos()
+                 {
+                     var articulosLista = modeloArticulo.ConsultaCursos();
+
+                     return View("../Views/Store/Shop", articulosLista);
+                 }
+
+                 */
 
 
 

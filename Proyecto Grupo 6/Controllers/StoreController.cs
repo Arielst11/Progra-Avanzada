@@ -103,9 +103,6 @@ namespace Proyecto_Grupo_6.Controllers
         }
 
 
-
-
-
         [HttpGet]
         public ActionResult ActualizarArticulo()
         {
@@ -113,7 +110,18 @@ namespace Proyecto_Grupo_6.Controllers
             return View("ActualizarArticulo" , articulosLista);
         }
 
+        [HttpGet]
+        public ActionResult ActualizarArticuloConId(long q)
+        {
+            var articuloEntidad = modeloArticulo.ActualizarArticulo(q);
 
+            if(articuloEntidad.ProductId == null)
+            {
+                return RedirectToAction("ActualizarArticulo", "Store"); // esto no deberia pasar....
+            }
+
+            return View ("FormularioArticuloActualizar", articuloEntidad);
+        }
 
 
     }

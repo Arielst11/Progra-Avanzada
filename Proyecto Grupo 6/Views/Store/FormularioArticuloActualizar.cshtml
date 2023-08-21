@@ -1,0 +1,44 @@
+﻿@model Proyecto_Grupo_6.Entities.ArticuloEnt
+
+
+
+
+@using (Html.BeginForm("ActualizarArticuloEnBasedeDatos", "Articulo", FormMethod.Post))
+{
+    <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+            <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h3 style="color: forestgreen !important" class="text-primary">Acualizar Articulo</h3>
+
+                    
+                </div>
+                <hr />
+                <h3>el ID del articulo a actualizar es @Model.ProductId</h3>
+
+
+                @Html.HiddenFor(m => m.ProductId)
+
+                <div class="form-floating mb-3">
+                    @Html.TextBoxFor(m => m.ProductName, new { @type = "text", @class = "form-control", placeholder = Model.ProductName })
+                    <label for="floatingInput">Nombre</label>
+                </div>
+                <div class="form-floating mb-3">
+                    @Html.TextBoxFor(m => m.Description, new { @type = "text", @class = "form-control", placeholder = Model.Description })
+                    <label for="floatingInput">Descripción</label>
+                </div>
+                <div class="form-floating mb-3">
+                    @Html.TextBoxFor(m => m.Price, new { @type = "text", @class = "form-control", placeholder = Model.Price })
+                    <label for="floatingInput">Precio</label>
+                </div>
+                <div class="form-floating mb-3">
+                    @Html.TextBoxFor(m => m.Image, new { @type = "text", @class = "form-control", placeholder = Model.Image })
+                    <label for="floatingInput">Imagen</label>
+                </div>
+
+                <button style="background-color: forestgreen !important" type="submit" class="btn btn-primary py-3 w-100 mb-4">Actualizar </button>
+
+            </div>
+        </div>
+    </div>
+}

@@ -66,8 +66,6 @@ namespace API_Proyecto_Grupo_6.Controllers
     }
 
 
-
-
         [HttpDelete]
         [Route("api/RemoverArticulo")]
         public int RemoverArticulo(long q)
@@ -85,6 +83,61 @@ namespace API_Proyecto_Grupo_6.Controllers
                 }
 
                 return 0;
+            }
+        }
+
+
+
+        [HttpGet]
+        [Route("api/RetornarArticulo")]
+        public ArticuloEnt RetornarArticulo(long q)
+        {
+            using (var bd = new ProyectoPrograEntities())
+            {
+                var datos = (from x in bd.Products
+                             where x.ProductId == q
+                             select x ).FirstOrDefault();
+
+                if (datos != null)
+                {
+                    ArticuloEnt resp = new ArticuloEnt();
+
+                    resp.ProductId = datos.ProductId;
+                    resp.ProductName = datos.ProductName;
+                    resp.Description = datos.Description;
+                    resp.Price = datos.Price;
+                    resp.Image = datos.Image;
+
+
+                    return resp;
+                }
+                else
+                {
+                    return new ArticuloEnt();
+                }
+            }
+        }
+
+
+        [HttpPut]
+        [Route("api/ActualizarArticulo")]
+        public void ActualizarCurso(ArticuloEnt entidad)
+        {
+            using (var bd = new ProyectoPrograEntities())
+            {
+                var ArticuloEncontrado = (from x in bd.Products
+                                       where x.ProductId == entidad.ProductId
+                                          select x).FirstOrDefault();
+
+                if (ArticuloEncontrado != null)
+                {
+                    ArticuloEncontrado.ProductName = entidad.ProductName;
+                    ArticuloEncontrado.Description = entidad.Description;
+                    ArticuloEncontrado.Price = entidad.Price;
+                    ArticuloEncontrado.Image = entidad.Image;                  
+                    bd.SaveChanges();
+                }
+
             }
         }
 
