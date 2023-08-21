@@ -102,7 +102,6 @@ namespace Proyecto_Grupo_6.Controllers
             return View("BorrarArticulo", articulosLista);
         }
 
-      
 
 
 

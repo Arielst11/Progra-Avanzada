@@ -36,26 +36,29 @@ namespace Proyecto_Grupo_6.Controllers
             }
         }
 
-       
-        [HttpPost]
-        public ActionResult BorrarArticulo(long q)
-        {
-            var resp = modeloArticulo.BorrarArticulo(q);
 
-            return RedirectToAction("BorrarArticulo", "Store");
-        }
+   
 
-       /*  
-         esto lo hace el controlador de shop cuando se carga la view.
-        [HttpGet]
-        public ActionResult ConsultarArticulosYviewArticulos()
-        {
-            var articulosLista = modeloArticulo.ConsultaCursos();
+        
+         [HttpGet]
+         public ActionResult BorrarArticulo(long q)
+         {
+             var resp = modeloArticulo.BorrarArticulo(q);
 
-            return View("../Views/Store/Shop", articulosLista);
-        }
+             return RedirectToAction("BorrarArticulo", "Store");
+         }
 
-        */
+/* 
+          esto lo hace el controlador de shop cuando se carga la view.
+         [HttpGet]
+         public ActionResult ConsultarArticulosYviewArticulos()
+         {
+             var articulosLista = modeloArticulo.ConsultaCursos();
+
+             return View("../Views/Store/Shop", articulosLista);
+         }
+
+         */
 
 
 

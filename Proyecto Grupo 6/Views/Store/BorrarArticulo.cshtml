@@ -45,9 +45,11 @@
                         <td>₡@item.Price</td>
                         <td><img width="40" ; height="35" src="@item.Image"></td>
                         <td>
+      
                             <a href="@Url.Action("BorrarArticulo","Articulo", new { q = item.ProductId })">
+                             
                                 <img width="40" height="35" class="boton-menu" alt="BorrarArticulo" src="@Url.Content("~/WebItems/img/borrarArticulo.png")">
-                            </a>                     
+                            </a>
                         </td>
                     </tr>
             }
