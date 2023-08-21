@@ -152,6 +152,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\JavaScript.js" />
     <Content Include="WebItems\css\bootstrap.min.css" />
     <Content Include="WebItems\css\elegant-icons.css" />
     <Content Include="WebItems\css\font-awesome.min.css" />
@@ -310,6 +311,7 @@
     <Content Include="Views\Shared\_Layout - login.cshtml" />
     <Content Include="Views\Store\IniciarSesion.cshtml" />
     <Content Include="Views\Store\Registro.cshtml" />
+    <Content Include="Views\Store\ViewBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
